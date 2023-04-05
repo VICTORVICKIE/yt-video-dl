@@ -1,6 +1,9 @@
 {
 	"name": "yt-video-dl",
 	"version": "0.0.1",
+	"engines": {
+		"node": "18.15.0"
+	},
 	"private": true,
 	"scripts": {
 		"dev": "vite dev",

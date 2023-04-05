@@ -2,6 +2,7 @@ services:
   - type: web
     name: yt-video-dl
     env: node
+    plan: free
     buildCommand: pnpm install && pnpm run build
     startCommand: node build/index.js
     autoDeploy: false
