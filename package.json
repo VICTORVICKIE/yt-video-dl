@@ -11,7 +11,7 @@
 		"test:unit": "vitest",
 		"lint": "prettier --plugin-search-dir . --check . && eslint .",
 		"format": "prettier --plugin-search-dir . --write .",
-		"tauri": "tauri"
+		"start": "node build/index.js"
 	},
 	"dependencies": {
 		"ffmpeg-static": "5.1.0",
