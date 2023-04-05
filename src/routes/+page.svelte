@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { browser } from '$app/environment'
-	import { getVideoID, validateID, validateURL } from '$lib/utils'
+	import { getVideoID, validateID, validateURL, type Result } from '$lib/utils'
 	import { saveAs } from 'file-saver'
 
 	let icon: string = 'ph:download-simple-duotone'
@@ -30,22 +30,30 @@
 		}
 	}
 
+	async function save(url: Result) {
+		const result = await fetch(`/download?video_id=${url.data}`)
+		const content_disposition = result.headers.get('content-disposition')
+
+		if (result.ok && content_disposition) {
+			let video_blob = await result.blob()
+			const file = get_filename(content_disposition)
+			saveAs(video_blob, file)
+		} else {
+			console.log('error')
+		}
+	}
+
 	async function download() {
 		icon = 'ph:check-bold'
 
-		const url = match_yt_url(input_url) ?? 'dQw4w9WgXcQ'
-		console.log(url)
-		if (!url.error) {
-			const result = await fetch('/download')
-			const content_disposition = result.headers.get('content-disposition')
+		const url = match_yt_url(input_url)
 
-			if (result.ok && content_disposition) {
-				let video_blob = await result.blob()
-				const file = get_filename(content_disposition)
-				saveAs(video_blob, file)
-			} else {
-				console.log('error')
-			}
+		if (!url.error) {
+			await save(url)
+		}
+
+		if (!input_url) {
+			await save({ data: 'dQw4w9WgXcQ', error: false })
 		}
 
 		setTimeout(() => {

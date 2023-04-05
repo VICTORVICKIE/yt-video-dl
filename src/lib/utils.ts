@@ -1,3 +1,9 @@
+export interface Result {
+    data: string
+    error: boolean
+}
+
+
 const validQueryDomains = new Set([
     'youtube.com',
     'www.youtube.com',

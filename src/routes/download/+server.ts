@@ -1,3 +1,4 @@
+import type { Result } from '$lib/utils'
 import { json, type RequestHandler } from '@sveltejs/kit'
 import { exec, spawn } from 'child_process'
 import ffmpeg_path from 'ffmpeg-static'
@@ -7,10 +8,7 @@ import sanitize from 'sanitize-filename'
 import type { Readable, Writable } from 'stream'
 import ytdl from 'ytdl-core'
 
-interface Result {
-    data: string
-    error: boolean
-}
+
 
 async function get_quality_video(video_formats: ytdl.videoFormat[], quality: number) {
     let selected_video_format
@@ -99,8 +97,9 @@ async function download_video(video_id: string) {
     return result
 }
 
-export const GET: RequestHandler = async () => {
-    const result: Result = await download_video('6xKWiCMKKJg')
+export const GET: RequestHandler = async ({ url }) => {
+    const video_id = url.searchParams.get('video_id') as string
+    const result: Result = await download_video(video_id)
 
     if (result.error) {
         return json(result)

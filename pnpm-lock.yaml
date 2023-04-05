@@ -2,33 +2,33 @@ lockfileVersion: 5.4
 
 specifiers:
   '@sveltejs/adapter-auto': ^2.0.0
-  '@sveltejs/adapter-node': ^1.2.3
-  '@sveltejs/kit': ^1.5.0
-  '@types/file-saver': ^2.0.5
-  '@types/fs-extra': ^11.0.1
-  '@typescript-eslint/eslint-plugin': ^5.45.0
-  '@typescript-eslint/parser': ^5.45.0
-  autoprefixer: ^10.4.14
-  daisyui: ^2.51.5
-  eslint: ^8.28.0
-  eslint-config-prettier: ^8.5.0
-  eslint-plugin-svelte3: ^4.0.0
-  ffmpeg-static: ^5.1.0
-  file-saver: ^2.0.5
-  fs-extra: ^11.1.1
-  iconify-icon: ^1.0.7
-  postcss: ^8.4.21
-  prettier: ^2.8.0
-  prettier-plugin-svelte: ^2.8.1
-  sanitize-filename: ^1.6.3
-  svelte: ^3.54.0
-  svelte-check: ^3.0.1
-  tailwindcss: ^3.3.1
-  tslib: ^2.4.1
-  typescript: ^5.0.0
-  vite: ^4.2.0
-  vitest: ^0.25.3
-  ytdl-core: ^4.11.3
+  '@sveltejs/adapter-node': 1.2.3
+  '@sveltejs/kit': 1.5.0
+  '@types/file-saver': 2.0.5
+  '@types/fs-extra': 11.0.1
+  '@typescript-eslint/eslint-plugin': 5.57.0
+  '@typescript-eslint/parser': 5.57.0
+  autoprefixer: 10.4.14
+  daisyui: 2.51.5
+  eslint: 8.37.0
+  eslint-config-prettier: 8.8.0
+  eslint-plugin-svelte3: 4.0.0
+  ffmpeg-static: 5.1.0
+  file-saver: 2.0.5
+  fs-extra: 11.1.1
+  iconify-icon: 1.0.7
+  postcss: 8.4.21
+  prettier: 2.8.7
+  prettier-plugin-svelte: 2.10.0
+  sanitize-filename: 1.6.3
+  svelte: 3.58.0
+  svelte-check: 3.1.4
+  tailwindcss: 3.3.1
+  tslib: 2.5.0
+  typescript: 5.0.3
+  vite: 4.2.1
+  vitest: 0.25.8
+  ytdl-core: 4.11.3
 
 dependencies:
   ffmpeg-static: 5.1.0
@@ -38,9 +38,9 @@ dependencies:
   ytdl-core: 4.11.3
 
 devDependencies:
-  '@sveltejs/adapter-auto': 2.0.0_@sveltejs+kit@1.15.0
-  '@sveltejs/adapter-node': 1.2.3_@sveltejs+kit@1.15.0
-  '@sveltejs/kit': 1.15.0_svelte@3.58.0+vite@4.2.1
+  '@sveltejs/adapter-auto': 2.0.0_@sveltejs+kit@1.5.0
+  '@sveltejs/adapter-node': 1.2.3_@sveltejs+kit@1.5.0
+  '@sveltejs/kit': 1.5.0_svelte@3.58.0+vite@4.2.1
   '@types/file-saver': 2.0.5
   '@types/fs-extra': 11.0.1
   '@typescript-eslint/eslint-plugin': 5.57.0_z24sz2fazj3bxoipp6m4s7b2mi
@@ -438,16 +438,16 @@ packages:
       rollup: 3.20.2
     dev: true
 
-  /@sveltejs/adapter-auto/2.0.0_@sveltejs+kit@1.15.0:
+  /@sveltejs/adapter-auto/2.0.0_@sveltejs+kit@1.5.0:
     resolution: {integrity: sha512-b+gkHFZgD771kgV3aO4avHFd7y1zhmMYy9i6xOK7m/rwmwaRO8gnF5zBc0Rgca80B2PMU1bKNxyBTHA14OzUAQ==}
     peerDependencies:
       '@sveltejs/kit': ^1.0.0
     dependencies:
-      '@sveltejs/kit': 1.15.0_svelte@3.58.0+vite@4.2.1
+      '@sveltejs/kit': 1.5.0_svelte@3.58.0+vite@4.2.1
       import-meta-resolve: 2.2.2
     dev: true
 
-  /@sveltejs/adapter-node/1.2.3_@sveltejs+kit@1.15.0:
+  /@sveltejs/adapter-node/1.2.3_@sveltejs+kit@1.5.0:
     resolution: {integrity: sha512-Fv6NyVpVWYA63KRaV6dDjcU8ytcWFiUr0siJOoHl+oWy5WHNEuRiJOUdiZzYbZo8MmvFaCoxHkTgPrVQhpqaRA==}
     peerDependencies:
       '@sveltejs/kit': ^1.0.0
@@ -455,12 +455,12 @@ packages:
       '@rollup/plugin-commonjs': 24.0.1_rollup@3.20.2
       '@rollup/plugin-json': 6.0.0_rollup@3.20.2
       '@rollup/plugin-node-resolve': 15.0.1_rollup@3.20.2
-      '@sveltejs/kit': 1.15.0_svelte@3.58.0+vite@4.2.1
+      '@sveltejs/kit': 1.5.0_svelte@3.58.0+vite@4.2.1
       rollup: 3.20.2
     dev: true
 
-  /@sveltejs/kit/1.15.0_svelte@3.58.0+vite@4.2.1:
-    resolution: {integrity: sha512-fvDsW9msxWjDU/j9wwLlxEZ6cpXQYcmcQHq7neJMqibMEl39gI1ztVymGnYqM8KLqZXwNmhKtLu8EPheukKtXQ==}
+  /@sveltejs/kit/1.5.0_svelte@3.58.0+vite@4.2.1:
+    resolution: {integrity: sha512-AkWgCO9i2djZjTqCgIQJ5XfnSzRINowh2w2Gk9wDRuTwxKizSuYe3jNvds/HCDDGHo8XE5E0yWNC9j2XxbrX+g==}
     engines: {node: ^16.14 || >=18}
     hasBin: true
     requiresBuild: true
@@ -474,14 +474,14 @@ packages:
       devalue: 4.3.0
       esm-env: 1.0.0
       kleur: 4.1.5
-      magic-string: 0.30.0
+      magic-string: 0.27.0
       mime: 3.0.0
       sade: 1.8.1
       set-cookie-parser: 2.6.0
       sirv: 2.0.2
       svelte: 3.58.0
       tiny-glob: 0.2.9
-      undici: 5.21.0
+      undici: 5.18.0
       vite: 4.2.1
     transitivePeerDependencies:
       - supports-color
@@ -2445,8 +2445,8 @@ packages:
     hasBin: true
     dev: true
 
-  /undici/5.21.0:
-    resolution: {integrity: sha512-HOjK8l6a57b2ZGXOcUsI5NLfoTrfmbOl90ixJDl0AEFG4wgHNDQxtZy15/ZQp7HhjkpaGlp/eneMgtsu1dIlUA==}
+  /undici/5.18.0:
+    resolution: {integrity: sha512-1iVwbhonhFytNdg0P4PqyIAXbdlVZVebtPDvuM36m66mRw4OGrCm2MYynJv/UENFLdP13J1nPVQzVE2zTs1OeA==}
     engines: {node: '>=12.18'}
     dependencies:
       busboy: 1.6.0
